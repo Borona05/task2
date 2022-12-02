@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/Task04/roboto.woff2');
+}
+
+@keyframes gradient {
+    0% {
+        box-shadow: 0 -50vh 20vh -30vh #fc0106 inset, 0 50vh 20vh -30vh #01fc06 inset;
+    }
+
+    50% {
+        box-shadow: 0 -50vh 20vh -30vh #01fc06 inset, 0 50vh 20vh -30vh #fc0106 inset;
+    }
+
+    100% {
+        box-shadow: 0 -50vh 20vh -30vh #fc0106 inset, 0 50vh 20vh -30vh #01fc06 inset;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: Roboto;
+    font-size: 1.5vh;
+    user-select: none;
+    overflow: hidden;
+    display: flex;
+    background-color: #D3D3D3;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: 10s gradient infinite;
+}
+
+@keyframes show_block {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide_block {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.text_alert {
+    color: white;
+    position: fixed;
+    font-size: 3vh;
+    border: solid 0.1vh #000000;
+    box-shadow: 0 0 1vh 0vh #000000;
+    background-color: #1F222C;
+    transform: rotate(-45deg);
+    z-index: 100;
+    transition: 5s;
+}
+
+.text_alert.top {
+    top: -25vh;
+    left: -35vh;
+}
+
+.text_alert.top:hover {
+    top: -50vh;
+    left: -70vh;
+}
+
+.text_alert.bottom {
+    bottom: -25vh;
+    right: -35vh;
+}
+
+.text_alert.bottom:hover {
+    bottom: -50vh;
+    right: -70vh;
+}
+
+.secret {
+    position: fixed;
+    top: 3vh;
+    left: 3vh;
+}
+
+.secret img {
+    width: 10vh;
+    border-radius: 1vh;
+    box-shadow: 0 0 1vh 0.1vh #1F222C;
+    transition: 2s;
+    z-index: 0;
+}
+
+.false_secret {
+    position: fixed;
+    bottom: 3vh;
+    right: 3vh;
+    width: 20vh;
+}
+
+.false_secret span {
+    text-decoration: line-through;
+}
+
+.what_do_button {
+    border: solid 0.1vh #000000;
+    box-shadow: 0 0 1vh 0vh #000000;
+    background-color: #1F222C;
+    font-size: 3vh;
+    color: white;
+    transition: 0.5s;
+    width: 60vh;
+    padding: 1vh 5vh;
+    border-radius: 1vh;
+    text-align: center;
+    height: 3.1vh;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.what_do_button:hover {
+    height: 6.6vh;
+}
+
+.hint_block {
+    position: absolute;
+    margin: 0;
+    font-size: 3vh;
+    border: solid 0.1vh #000000;
+    box-shadow: 0 0 1vh 0vh #000000;
+    background-color: #1F222C;
+    color: white;
+    width: 50vh;
+    padding: 1vh 5vh;
+    border-radius: 1vh;
+    text-align: center;
+}
+
+.calculator {
+    text-align: center;
+}
+
+input, button {
+    margin-bottom: 10px;
+}
+
+input {
+    width: 120px;
+    text-align: center;
+}
+
+button {
+    width: 62px;
+}

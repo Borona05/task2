@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы валют</title>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (){
+            fetch("https://www.cbr-xml-daily.ru/daily_json.js")
+            .then((response) => response.json())
+            .then((data) => {
+                document.getElementById("usd").innerHTML = data["Valute"]["USD"]["Value"];
+                document.getElementById("eur").innerHTML = data["Valute"]["EUR"]["Value"];
+                document.getElementById("azn").innerHTML = data["Valute"]["AZN"]["Value"];
+            })
+        });
+    </script>
+</head>
+<body>
+    <div>USD: <span id="usd">Wait...</span></div>
+    <div>EUR: <span id="eur">Wait...</span></div>
+    <div>AZN: <span id="azn">Wait...</span></div>
+</body>
